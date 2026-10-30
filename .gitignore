@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencias
+node_modules/
+
+# Entorno / secretos
+.env
+.env.local
+*serviceAccount*.json
+
+# Firebase (no incluido en este showcase)
+.firebase/
+.firebaserc
+firebase-debug.log

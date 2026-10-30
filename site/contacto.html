@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contacto — Consultoría Cloud</title>
+<meta name="description" content="Solicite su diagnóstico de ahorro en AWS (Consultoría) o hable con un asesor de Academy.">
+<link rel="icon" href="assets/mark-color.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head><body class="l-consultoria" data-line="consultoria">
+<!-- Header y footer: site.js los cambia según el interés elegido (consultoria / academy).
+     Preselección por URL: contacto.html?linea=academy  ·  contacto.html?linea=consultoria (por defecto). -->
+<header class="site-header" data-site-header="consultoria" data-current="contacto" data-cta-href="#diagnostico"><div class="site-header__inner"><a class="site-header__logo" href="index.html"><img src="assets/logo-horizontal-white.png" alt="Consultoría Cloud" height="34"></a></div></header>
+
+<main id="contenido">
+<section class="c-dark c-page-hero" aria-labelledby="page-title"><div class="container"><div class="c-page-hero__copy" style="gap:24px">
+<span class="eyebrow">Contacto</span>
+<h1 id="page-title" style="font-size:clamp(42px,5.6vw,72px)">Hablemos.</h1>
+<form data-interest onsubmit="return false">
+<fieldset class="interest">
+<legend>¿Qué le interesa?</legend>
+<div class="interest__opts">
+<label class="interest__opt"><input type="radio" name="interes" value="consultoria" checked><span>Consultoría TI</span></label>
+<label class="interest__opt"><input type="radio" name="interes" value="academy"><span>Academy</span></label>
+</div>
+</fieldset>
+</form>
+</div></div></section>
+
+<!-- ============ PANEL CONSULTORÍA ============ -->
+<div data-panel="consultoria">
+<section class="v-sec section--subtle" id="diagnostico" aria-labelledby="diag-title" style="scroll-margin-top:90px"><div class="container v-split" style="align-items:start">
+<div class="stack" style="gap:24px">
+<span class="eyebrow">Consultoría</span>
+<h2 id="diag-title" style="font-size:clamp(32px,4vw,52px)">Cuéntenos qué necesita.</h2>
+<p class="v-prose">Déjenos sus datos y una breve descripción de lo que busca. Revisamos su caso y coordinamos una reunión para ver cómo podemos ayudarle.</p>
+<div class="icon-row__it"><span data-icon="mail" data-size="24"></span><strong><a href="mailto:info@example.com" data-config-k="email" data-mailto="">info@example.com</a></strong></div>
+</div>
+<div class="gform">
+<!-- TODO: pegar URL del Google Form embebible en config.js → ABC_CONSULTORIA.googleFormEmbedUrl -->
+<div data-gform></div>
+<div class="gform__pending" data-gform-pending>
+<h3>Formulario disponible en breve</h3>
+<p>Escríbanos a <a href="mailto:info@example.com?subject=Diagn%C3%B3stico%20de%20ahorro%20AWS" data-config-k="email" data-mailto="?subject=Diagn%C3%B3stico%20de%20ahorro%20AWS">info@example.com</a>.</p>
+</div>
+<!-- TODO: revisión legal de privacidad.html para cubrir los datos del formulario de Consultoría. -->
+<p class="gform__legal">Datos tratados conforme a la ley aplicable. <a href="privacidad.html">Privacidad</a>.</p>
+</div>
+</div></section>
+</div>
+
+<!-- ============ PANEL ACADEMY (WhatsApp y agenda; tono de Academy) ============ -->
+<div data-panel="academy" hidden>
+<section class="v-sec section--subtle"><div class="container">
+<div class="tiles">
+<a class="tile" data-link="wa-comercial" href="https://api.whatsapp.com/send/?phone=000000000000" target="_blank" rel="noopener"><span class="tile__ic" style="background:#25D366;color:#0B3B22" data-icon="whatsapp" data-size="26"></span><span class="tile__t">WhatsApp</span><span class="tile__go">Escríbenos →</span></a>
+<a class="tile" href="#" target="_blank" rel="noopener"><span class="tile__ic" data-icon="users" data-size="26"></span><span class="tile__t">Asesor académico</span><span class="tile__go">Agenda gratis →</span></a>
+<a class="tile" href="cursos.html"><span class="tile__ic" data-icon="book" data-size="26"></span><span class="tile__t">Ver cursos</span><span class="tile__go">Academy →</span></a>
+</div>
+</div></section>
+</div>
+</main>
+<footer class="site-footer" data-site-footer="consultoria"><div class="site-footer__legal"><div><a href="index.html">Consultoría Cloud</a><a href="academy.html">Academy</a><a href="#" target="_blank" rel="noopener">Libro de reclamaciones</a><a href="terminos.html">Términos</a><a href="politica-reembolso.html">Reembolso</a><a href="privacidad.html">Privacidad</a></div></div></footer>
+<a class="wa-float" data-link="wa" data-course="Consulta desde la web" href="https://api.whatsapp.com/send/?phone=000000000000&amp;text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20informaci%C3%B3n%20sobre%3A%20Consulta%20desde%20la%20web" aria-label="Hablar con un asesor por WhatsApp" hidden><span data-icon="whatsapp" data-size="28"></span></a>
+<script src="config.js"></script><script src="site.js"></script></body></html>
