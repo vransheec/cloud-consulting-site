@@ -13,6 +13,15 @@ Sitio corporativo de una consultora TI (Cloud, Data e IA), construido como **HTM
 - **Diseño mobile-first**, accesible (roles ARIA, `aria-labelledby`, foco visible) y con sistema de design tokens en CSS (`:root`): colores, tipografía, radios, sombras y espaciado.
 - Ilustraciones **SVG animadas** inline (sin librerías) para explicar el servicio de optimización de costos.
 
+```mermaid
+flowchart LR
+    HTML[Páginas HTML] --> CFG[config.js<br/>datos y enlaces]
+    HTML --> JS[site.js<br/>header / footer / iconos]
+    HTML --> CSS[styles.css<br/>design tokens]
+    JS --> FORM[Formulario propio] -. POST .-> EXT[[Formulario externo]]
+    HTML --> HOST[(Hosting estático<br/>Firebase)]
+```
+
 ## Stack
 
 | Capa | Tecnología |
